@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgray;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    background-color: lightgray;
+    text-align: left;
+    align-items: center;
+    padding: 3% 2%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    background-color: lightgray;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1032px;
+    margin: 0 auto;
+    padding: 0 2%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.memeitem {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: none;
+    transition: transform 1s;
+}
+
+.wrapper:hover .icon {
+    display: block;
+}
+
+.memeitem:hover .icon {
+    transform: rotate(45deg);
+}
+
+.input:checked .icon {
+    transform: rotate(45deg);
+    display: block;
+}
+
+.bayanname {
+    min-height: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.input {
+    position: absolute;
+    display: none;
+}
+
+.image {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+    transition: ease-in-out 2s;
+}
+
+.input:checked ~ .image {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.memeitem:hover .image {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input:checked .image {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input:checked ~ .bayanname {
+    color: blue;
+}
+
+.memeitem:hover .bayanname {
+    color: blue;
+}
+
+
